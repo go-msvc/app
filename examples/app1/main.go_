@@ -1,0 +1,9 @@
+package main
+
+func main() {
+	//register own service with server to consume app requests
+
+	...need NATS server to manage service events - not HTTP...
+	then console and web must use NATS to communicate with server as well
+
+}

@@ -1,0 +1,13 @@
+package main
+
+import (
+	"github.com/go-msvc/app/console"
+	"github.com/go-msvc/app/examples"
+)
+
+func main() {
+	app := examples.New()
+	if err := console.Run(app); err != nil {
+		panic(err)
+	}
+}

@@ -1,0 +1,19 @@
+package main
+
+import (
+	"flag"
+
+	"github.com/go-msvc/app/examples"
+	"github.com/go-msvc/app/web"
+)
+
+func main() {
+	addr := flag.String("addr", "localhost:12345", "Server address")
+	flag.Parse()
+
+	app := examples.New()
+
+	if err := web.Serve(*addr, app); err != nil {
+		panic(err)
+	}
+}
